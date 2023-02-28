@@ -2,20 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import AlertTest from './AlertTest';
 
-
-
-
 function App() {
-
-  const mysql = require('mysql2');
-  const connection = mysql.createConnection({
-    host: "127.0.0.1",
-    user: "root",
-    database: "testing_db"
-  });
-
-  module.exports = connection;
-
   return (
     <div className="App">
       <header className="App-header">
@@ -33,10 +20,7 @@ function App() {
         </a>
       </header>
 
-      {/* Below is to test a connection to a database */}
-
       <AlertTest></AlertTest>
-
 
 
 
