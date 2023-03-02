@@ -1,8 +1,46 @@
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+
 import AlertTest from './AlertTest';
+import DivDB from './_divDatabaseTest';
+
+/* 
+async function getData()
+{
+    console.log("Started getData");
+    const response = await fetch("http://localhost:3002/test");
+    const data = await response.json();
+    console.log("Finished getData");
+    return data;
+}
+  let message2 = getData();
+
+  message2 == null ? message2 = [{id: -1, nome: "FAILED_CASE"}] : message2 = message2;
+*/
 
 function App() {
+
+  const [message, setMessage] = useState("");
+  
+  
+/*   useEffect(() => {
+    fetch("http://localhost:3002/test")
+      .then((res) => {
+        console.log(res);
+        setMessage(res.json())
+      })
+  }, []); */
+
+  useEffect(() => {
+    axios.get("http://localhost:3002/bebidas")
+      .then((res) => {
+        console.log(res);
+        setMessage(res.data)
+      })
+  }, [])
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,10 +58,11 @@ function App() {
         </a>
       </header>
 
+      {/* <h1>Conteudo: {message[0].nome}</h1> */}
+
+      <DivDB></DivDB>
+
       <AlertTest></AlertTest>
-
-
-
     </div>
   );
 }
