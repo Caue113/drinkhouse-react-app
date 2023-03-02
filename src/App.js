@@ -3,8 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 
-import AlertTest from './AlertTest';
-import DivDB from './_divDatabaseTest';
+import AlertTest from './Layout/AlertTest';
+import DivDB from './Components/_divDatabaseTest';
 
 /* 
 async function getData()
