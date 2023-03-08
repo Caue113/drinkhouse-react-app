@@ -8,6 +8,13 @@ function AlertTest() {
       <p>
         Change this and that and try again.
       </p>
+      <hr></hr>
+
+      <p>Don't worry,
+        <Alert.Link href='https://google.com' target='_blank'>
+           Google it!
+        </Alert.Link>
+      </p>
     </Alert>
   )
 }

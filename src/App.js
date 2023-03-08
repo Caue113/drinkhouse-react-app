@@ -5,28 +5,19 @@ import axios from 'axios';
 
 import AlertTest from './Layout/AlertTest';
 import DivDB from './Components/_divDatabaseTest';
+import Footer from './Layout/Footer';
 
-/* 
-async function getData()
-{
-    console.log("Started getData");
-    const response = await fetch("http://localhost:3002/test");
-    const data = await response.json();
-    console.log("Finished getData");
-    return data;
-}
-  let message2 = getData();
 
-  message2 == null ? message2 = [{id: -1, nome: "FAILED_CASE"}] : message2 = message2;
-*/
+
 
 function App() {
 
   const [message, setMessage] = useState("");
   
   
-/*   useEffect(() => {
-    fetch("http://localhost:3002/test")
+    /*
+    useEffect(() => {
+      fetch("http://localhost:3002/test")
       .then((res) => {
         console.log(res);
         setMessage(res.json())
@@ -58,11 +49,10 @@ function App() {
         </a>
       </header>
 
-      {/* <h1>Conteudo: {message[0].nome}</h1> */}
-
       <DivDB></DivDB>
 
       <AlertTest></AlertTest>
+      <Footer></Footer>
     </div>
   );
 }
