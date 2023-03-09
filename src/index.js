@@ -1,15 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+import ErrorPage from './Pages/errorPage';
+import NavigationTest from './Pages/navigationTest';
+
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
+
+const router = createBrowserRouter([
+  //Root
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children:[{
+      }
+    ]
+  },
+  //navigationTest
+  {
+    path:"/navigationTest",
+    element: <NavigationTest />
+  }
+]);
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
