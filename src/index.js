@@ -11,6 +11,8 @@ import NavigationTest from './Pages/navigationTest';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import Bebidas from './Pages/bebidas';
+import Bebida from './Pages/bebida';
 
 const router = createBrowserRouter([
   //Root
@@ -26,6 +28,16 @@ const router = createBrowserRouter([
   {
     path:"/navigationTest",
     element: <NavigationTest />
+  },
+  {
+    path:"/bebidas",
+    element: <Bebidas />,
+    children:[{
+    }]
+  },
+  {
+    path: "bebidas/bebida/1",
+    element: <Bebida />
   }
 ]);
 
