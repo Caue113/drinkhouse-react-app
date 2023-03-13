@@ -1,36 +1,51 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Nav } from "react-bootstrap";
-import { json, Link } from "react-router-dom";
+import { json, Link, useLoaderData, useParams } from "react-router-dom";
+
+export async function loader({ params }){
+    console.log("Rodando PARAMS de LOADER");
+    console.log(params);
+
+    let result;
+
+    await axios.get(`http://localhost:3002/bebidas/bebida/${params.bebidaId}`)
+            .then((res) =>{
+                result = res.data;
+            });
+    
+    return {result};
+}
+
 
 function Bebida (){
+    const bebidas = useLoaderData();
 
-    /* const [bebida, setBebida] = useState();
+    const bebidasRow = () =>{
+        let temp = [];
+        bebidas.result.forEach((value)=>{
+            console.log(value)
+            temp.push(<p key={value.bebida_id}>{value.bebida_id} {value.nome}</p>);
+        });
 
+        return (temp);
+    }
 
-
-    useEffect(() =>{
-        axios.get("http://localhost:3002/bebidas/1")
-        .then((res) =>{
-            console.log(res);
-            setBebida(json(res.data));
-            console.log(bebida);
-        })
-    }, []); */
-
-    const [bebida, setBebida] = useState([]);
     
-    useEffect(() => {
-        axios.get("http://localhost:3002/bebidas/1")
+    /* const [bebida, setBebida] = useState([]); */
+
+    
+    
+/*     useEffect(() => {
+        axios.get("http://localhost:3002/bebidas/bebida/1")
         .then((result) => {
             console.log("Axios Ran. Result:");
-/*             console.log(result);
-            console.log(result.data); */
+            console.log(result);
             console.log(result.data);
             console.log(result.data[0]);
             setBebida(result.data[0]);
         });
-    },[])
+    },[]) */
     
 
     
@@ -44,7 +59,9 @@ function Bebida (){
 
             <div className="row">
                 <img src="#" alt="bebida"></img>
-                <p>Bebida supimpa:  {bebida[0]}</p>
+                <div>{bebidasRow()}</div>
+                
+                <p>Bebida supimpa:</p>
             </div>
         </div>
     );
