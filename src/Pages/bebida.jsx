@@ -1,7 +1,9 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { Nav } from "react-bootstrap";
 import { json, Link, useLoaderData, useParams } from "react-router-dom";
+import "./bebida.css";
+
 
 export async function loader({ params }){
     console.log("Rodando PARAMS de LOADER");
@@ -52,9 +54,9 @@ function Bebida (){
 
     return(
         <div className="container">
-            <Nav>
-                <Nav.Item><Link to={"./"}>Menu Principal</Link></Nav.Item>
-                <Nav.Item><Link to={"./bebidas"}>Menu de bebidas</Link></Nav.Item>
+            <Nav className="nav">
+                <Nav.Item><Link to={"/"} className="nav__link">Menu Principal</Link></Nav.Item>
+                <Nav.Item><Link to={"/bebidas"} className="nav__link">Menu de bebidas</Link></Nav.Item>
             </Nav>
 
             <div className="row">
