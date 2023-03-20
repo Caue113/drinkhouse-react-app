@@ -8,6 +8,10 @@ const style = {
     fontSize: "32px"
 }
 
+const style2 = {
+    backgroundColor: "#f9f9ff",
+}
+
 
 function Bebidas (){
 
@@ -22,12 +26,10 @@ function Bebidas (){
                 <p>Context</p>
                 <p>Context</p>
                 <p>Context</p>
+            </div>
+
+            <div className="row" style={style2}>
                 <Outlet></Outlet>
-
-                <p>Context</p>
-                <p>Context</p>
-                <p>Context</p>
-
             </div>
         </div>
     );

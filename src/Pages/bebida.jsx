@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Nav } from "react-bootstrap";
-import { json, Link, useLoaderData, useParams } from "react-router-dom";
+import { json, Link, Outlet, useLoaderData, useParams } from "react-router-dom";
 import "./bebida.css";
 
 
@@ -11,12 +11,17 @@ export async function loader({ params }){
 
     let result;
 
-    await axios.get(`http://localhost:3002/bebidas/bebida/${params.bebidaId}`)
-            .then((res) =>{
-                result = res.data;
-            });
-    
-    return {result};
+    try {
+        await axios.get(`http://localhost:3002/bebidas/bebida/${params.bebidaId}`)
+                .then((res) =>{
+                    result = res.data;
+                });
+        
+        return {result};
+    } catch (error) {
+        console.warn(error)
+    }
+
 }
 
 
@@ -64,6 +69,10 @@ function Bebida (){
                 <div>{bebidasRow()}</div>
                 
                 <p>Bebida supimpa:</p>
+            </div>
+
+            <div className="row">
+                <Outlet></Outlet>
             </div>
         </div>
     );

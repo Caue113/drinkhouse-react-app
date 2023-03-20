@@ -6,13 +6,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import ErrorPage from './Pages/errorPage';
 import NavigationTest from './Pages/navigationTest';
+import Bebidas from './Pages/bebidas';
+import Bebida, {loader as bebidaLoader} from './Pages/bebida';
 
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import Bebidas from './Pages/bebidas';
-import Bebida, {loader as bebidaLoader} from './Pages/bebida';
 
 const router = createBrowserRouter([
   //Root
@@ -32,14 +32,13 @@ const router = createBrowserRouter([
   {
     path:"/bebidas",
     element: <Bebidas />,
-    children:[{
+     children:[{
+      path: "bebida/:bebidaId",
+      element: <Bebida />,
+      loader: bebidaLoader,
     }]
   },
-  {
-    path: "bebidas/bebida/:bebidaId",
-    element: <Bebida />,
-    loader: bebidaLoader,
-  }
+
 ]);
 
 
