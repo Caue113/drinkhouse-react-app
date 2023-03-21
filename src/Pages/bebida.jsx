@@ -19,7 +19,8 @@ export async function loader({ params }){
         
         return {result};
     } catch (error) {
-        console.warn(error)
+        console.warn(error);
+        throw error;
     }
 
 }
@@ -39,24 +40,6 @@ function Bebida (){
     }
 
     
-    /* const [bebida, setBebida] = useState([]); */
-
-    
-    
-/*     useEffect(() => {
-        axios.get("http://localhost:3002/bebidas/bebida/1")
-        .then((result) => {
-            console.log("Axios Ran. Result:");
-            console.log(result);
-            console.log(result.data);
-            console.log(result.data[0]);
-            setBebida(result.data[0]);
-        });
-    },[]) */
-    
-
-    
-
     return(
         <div className="container">
             <Nav className="nav">
