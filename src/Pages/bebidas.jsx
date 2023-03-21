@@ -29,7 +29,7 @@ function Bebidas (){
             </div>
 
             <div className="row" style={style2}>
-                <Outlet></Outlet>
+            <Outlet></Outlet>
             </div>
         </div>
     );
