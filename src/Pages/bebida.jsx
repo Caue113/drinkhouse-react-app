@@ -29,7 +29,7 @@ export async function loader({ params }){
 function Bebida (){
     const bebidas = useLoaderData();
 
-    const bebidasRow = () =>{
+    const renderBebidasRow = () =>{
         let temp = [];
         bebidas.result.forEach((value)=>{
             console.log(value)
@@ -49,13 +49,12 @@ function Bebida (){
 
             <div className="row">
                 <img src="#" alt="bebida"></img>
-                <div>{bebidasRow()}</div>
+                <div>{renderBebidasRow()}</div>
                 
                 <p>Bebida supimpa:</p>
             </div>
 
             <div className="row">
-                <Outlet></Outlet>
             </div>
         </div>
     );

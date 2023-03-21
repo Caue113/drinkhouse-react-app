@@ -4,15 +4,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
+
+
 import ErrorPage from './Pages/errorPage';
 import NavigationTest from './Pages/navigationTest';
 import Bebidas from './Pages/bebidas';
 import Bebida, {loader as bebidaLoader} from './Pages/bebida';
 
-
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
 
 const router = createBrowserRouter([
   //Root
@@ -29,14 +29,20 @@ const router = createBrowserRouter([
     path:"/navigationTest",
     element: <NavigationTest />
   },
+
   {
     path:"/bebidas",
     element: <Bebidas />,
-     children:[{
-      path: "bebida/:bebidaId",
+  },
+
+  {
+    path: "bebida/",
+    /* element: <Bebida />, */
+    children:[{
+      path: ":bebidaId",
       element: <Bebida />,
       loader: bebidaLoader,
-    }]
+    }],
   },
 
 ]);
