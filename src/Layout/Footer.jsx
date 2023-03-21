@@ -1,5 +1,11 @@
 import React from "react";
-import { ListGroup, ListGroupItem, Nav } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
+
+/* folha css */
+
+import '../Styles/footer.css';
+
+import logo from '../Assets/Logo1.png'
 
 /*
     Exemplo de um Layout simples do footer. 
@@ -9,9 +15,9 @@ import { ListGroup, ListGroupItem, Nav } from "react-bootstrap";
     -Implementar 'React Router' nos links
 */
 
-function Footer(){
+const Footer = () => {
     return(
-        <div style={{backgroundColor: "#8B9DC3", display:"flex", flexDirection: "row", justifyContent: "space-evenly"}}>
+        <div className='footerBackground'>
             <Nav className="flex-column">
                 <h3>Ajuda</h3>
                 <Nav.Item>Preciso de Ajuda</Nav.Item>
@@ -31,6 +37,10 @@ function Footer(){
                 <Nav.Link href="#">Política de Privacidade</Nav.Link>
                 <Nav.Link href="#">Termos de Uso</Nav.Link>
             </Nav>
+
+            <img className="footerImage" src={logo} alt='logo'/>
+
+
         </div>
     );
 }
