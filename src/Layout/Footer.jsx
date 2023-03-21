@@ -29,7 +29,7 @@ function Footer(){
             <Nav className="flex-column">
                 <h3>Termos e Políticas</h3>
                 <Nav.Link href="#">Política de Privacidade</Nav.Link>
-                <Nav.Link href="#">Termos de Uso</Nav.Link>
+                <Nav.Link href="/amongus">Termos de Uso</Nav.Link>
             </Nav>
         </div>
     );
