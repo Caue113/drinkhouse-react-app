@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 
+/* componentes */
 import AlertTest from './Layout/AlertTest';
 import DivDB from './Components/_divDatabaseTest';
 import Footer from './Layout/Footer';
+import Header from './Layout/Header';
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header></Header>
       <DivDB></DivDB>
       <AlertTest></AlertTest>
       <Footer></Footer>
