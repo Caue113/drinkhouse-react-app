@@ -1,0 +1,12 @@
+.footerBackground {
+    background-color: #8B9DC3; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-evenly;
+}
+
+.footerImage {
+    height: 65px; 
+    width: 95px;
+    align-items: center;
+}
