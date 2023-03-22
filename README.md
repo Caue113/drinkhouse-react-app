@@ -28,3 +28,4 @@ O App utiliza as configurações padrões.
 ## To-Do
 
 - Adequar sistema de arquivos em MVC
+- Criar rotas para cada página diferente
