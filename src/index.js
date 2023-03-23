@@ -1,15 +1,59 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
+
+
+import ErrorPage from './Pages/errorPage';
+import NavigationTest from './Pages/navigationTest';
+import Bebidas from './Pages/bebidas';
+import Bebida, {loader as bebidaLoader} from './Pages/bebida';
+
+
+const router = createBrowserRouter([
+  //Root
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children:[{
+      }
+    ]
+  },
+  //navigationTest
+  {
+    path:"/navigationTest",
+    element: <NavigationTest />
+  },
+
+  {
+    path:"/bebidas",
+    element: <Bebidas />,
+  },
+
+  {
+    path: "bebida/",
+    /* element: <Bebida />, */
+    children:[{
+      path: ":bebidaId",
+      element: <Bebida />,
+      loader: bebidaLoader,
+    }],
+  },
+
+]);
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

@@ -29,6 +29,7 @@ import ifood from './Assets/ifood.png';
 import AlertTest from './Layout/AlertTest';
 import DivDB from './Components/_divDatabaseTest';
 import Footer from './Layout/Footer';
+import { Button } from 'react-bootstrap';
 
 
 function App() {
@@ -44,7 +45,8 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+  <>
+    <main className="App">
 
       <div className='firstContainer'>
         <h1 className='title'>Sede</h1>
@@ -103,8 +105,10 @@ function App() {
         <DivDB/>
         <AlertTest/>
         <Footer/> 
-    </div>
+    </main>
+  </>
   );
+  
 }
 
 export default App;
