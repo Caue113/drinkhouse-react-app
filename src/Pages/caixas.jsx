@@ -4,6 +4,8 @@ import { Nav } from "react-bootstrap";
 /* importe de imagens */
 import caixa from "../Assets/caixa.jpg";
 
+import "./caixas.css";
+
 function Caixas() {
   return (
     <div>
@@ -11,7 +13,7 @@ function Caixas() {
 
       <h2>Conheça as Lootboxes</h2>
 
-      <div class="container text-right" style={{ display: "flex" }}>
+      <div class={"Direita"}>
         <p>
           As Lootboxes são uma forma diferente de apimentar festas e reuniões
           com bebidas sortidas que agradam o sabor da galera.
@@ -62,16 +64,56 @@ function Caixas() {
             <h3>Básico</h3>
             <p>Um pequeno agrado mensal</p>
             <p>R$ 00,00</p>
-            <img
-              src="..\src\Assets\caixa-economica-federal7929.jpg"
-              alt="Case Refinado"
-            />
+            <img width={400} height={250} src={caixa} alt="Case" />
           </a>
-          <p>Inclui</p>
+          <p>Inclui: </p>
           <ul>
             <li>Cervajas</li>
             <li>Chopes</li>
             <li>Refrigerantes</li>
+          </ul>
+        </div>
+        <div>
+          <a href="#">
+            <h3>Fámilia</h3>
+            <p>Para dividir com todos</p>
+            <p>R$ 00,00</p>
+            <img width={400} height={250} src={caixa} alt="Case" />
+          </a>
+          <p>Inclui: </p>
+          <ul>
+            <li>Cervajas</li>
+            <li>Chopes</li>
+            <li>Refrigerantes</li>
+            <li>1 brinde</li>
+          </ul>
+        </div>
+        <div>
+          <a href="#">
+            <h3>Refinado</h3>
+            <p>Seleção única de vinhos e Champangnhes</p>
+            <p>R$ 00,00</p>
+            <img width={400} height={250} src={caixa} alt="Case" />
+          </a>
+          <p>Inclui: </p>
+          <ul>
+            <li>Vinhos brancos</li>
+            <li>Chopes</li>
+            <li>Refrigerantes</li>
+            <li>1 brinde</li>
+          </ul>
+        </div>
+        <div>
+          <a href="#">
+            <h3>Kids</h3>
+            <p>A garotada também incluída</p>
+            <p>R$ 00,00</p>
+            <img width={400} height={250} src={caixa} alt="Case" />
+          </a>
+          <p>Inclui: </p>
+          <ul>
+            <li>Guaranás</li>
+            <li>Mini-Guaranás</li>
           </ul>
         </div>
       </div>
