@@ -5,7 +5,6 @@ import axios from 'axios';
 import AlertTest from './Layout/AlertTest';
 import DivDB from './Components/_divDatabaseTest';
 import Footer from './Layout/Footer';
-import BigTitleSection from './Components/BigTitleSection';
 import { Button } from 'react-bootstrap';
 
 
