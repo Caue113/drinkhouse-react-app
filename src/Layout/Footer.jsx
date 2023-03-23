@@ -21,7 +21,6 @@ const Footer = () => {
             <Nav className="flex-column">
                 <h3>Ajuda</h3>
                 <Nav.Item>Preciso de Ajuda</Nav.Item>
-                <Nav.Link href="https://google.com">Google</Nav.Link>
                 <Nav.Link href="#">Perguntas Comuns</Nav.Link>
                 <Nav.Link href="#">SAC</Nav.Link>
             </Nav>
