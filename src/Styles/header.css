@@ -1,0 +1,22 @@
+.headerstyle{
+    background-color: #D45C39; 
+    display: flex;
+    flex-direction: row;
+    text-align: center; 
+    }
+
+.logostyle{
+    height: 65px;
+    width: 95px;
+    flex: 1;
+    }
+
+.cartstyle{
+    height: 65px; 
+    width: 95px;
+    align-items: center;
+    }
+
+.button:link{
+    color:#fff;
+}
