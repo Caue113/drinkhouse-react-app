@@ -11,7 +11,9 @@ const Header = () => {
   return (
     <div className="headerstyle">
       <Nav className="justify-content-center">
-        <img className="logostyle" src={Logo} alt="logotipo" />
+        <Nav.Link className="button" href="/">
+          <img className="logostyle" src={Logo} alt="logotipo" />
+        </Nav.Link>
         <Nav.Link className="button" href="./bebidas">
           {" "}
           Bebidas{" "}
@@ -28,7 +30,9 @@ const Header = () => {
           {" "}
           Contato{" "}
         </Nav.Link>
-        <img className="cartstyle" src={Carrinho} alt="carrinho de compras" />
+        <Nav.Link className="button" href="#">
+          <img className="cartstyle" src={Carrinho} alt="carrinho de compras" />
+        </Nav.Link>
       </Nav>
     </div>
   );

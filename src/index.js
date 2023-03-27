@@ -48,7 +48,7 @@ const router = createBrowserRouter([
     element: <Caixas />,
   },
 
-  {
+  /*{
     path: "faq/",
     element: <Faq />,
   },
@@ -78,7 +78,7 @@ const router = createBrowserRouter([
   {
     path: "pagamento/",
     element: <Pagamento />,
-  },
+  },*/
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
