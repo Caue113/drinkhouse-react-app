@@ -47,6 +47,38 @@ const router = createBrowserRouter([
     path: "/caixas",
     element: <Caixas />,
   },
+
+  {
+    path: "faq/",
+    element: <Faq />,
+  },
+
+  {
+    path: "contato/",
+    element: <Contato />,
+  },
+  {
+    path: "sobrenos/",
+    element: <SobreNos />,
+  },
+
+  {
+    path: "termos-de-uso/",
+    element: <TermosDeUso />,
+  },
+
+  {
+    path: "carrinho/",
+    element: <Carrinho />,
+  },
+  {
+    path: "checkout/",
+    element: <Checkout />,
+  },
+  {
+    path: "pagamento/",
+    element: <Pagamento />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
