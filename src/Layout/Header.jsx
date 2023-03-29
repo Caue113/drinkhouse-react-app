@@ -24,10 +24,16 @@ const Header = () => {
           {" "}
           <Link to={"/caixas"}>Caixas</Link>
         </Nav.Item>
-        <Nav.Item className="button"> Sobre </Nav.Item>
-        <Nav.Item className="button"> Contato </Nav.Item>
         <Nav.Item className="button">
-          <Link to={"/"}>
+          {" "}
+          <Link to={"/WIP"}>Sobre</Link>
+        </Nav.Item>
+        <Nav.Item className="button">
+          {" "}
+          <Link to={"/WIP"}>Contato</Link>
+        </Nav.Item>
+        <Nav.Item className="button">
+          <Link to={"/WIP"}>
             <img
               className="cartstyle"
               src={Carrinho}

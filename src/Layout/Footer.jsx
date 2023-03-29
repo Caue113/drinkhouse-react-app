@@ -22,37 +22,37 @@ const Footer = () => {
       <Nav className="flex-column">
         <h3>Ajuda</h3>
         <Nav.Item>
-          <Link to={"#"}>Preciso de Ajuda</Link>
+          <Link to={"/WIP"}>Preciso de Ajuda</Link>
         </Nav.Item>
         <Nav.Item>
-          <Link to={"#"}>Preguntas comuns</Link>
+          <Link to={"/WIP"}>Preguntas comuns</Link>
         </Nav.Item>
         <Nav.Item>
-          <Link to={"#"}>SAC</Link>
+          <Link to={"/WIP"}>SAC</Link>
         </Nav.Item>
       </Nav>
 
       <Nav className="flex-column">
         <h3>Contato</h3>
         <Nav.Item>
-          <Link to={"#"}>Sobre nós</Link>
+          <Link to={"/WIP"}>Sobre nós</Link>
         </Nav.Item>
         <Nav.Item>
-          <Link to={"#"}>Contatos</Link>
+          <Link to={"/WIP"}>Contatos</Link>
         </Nav.Item>
       </Nav>
 
       <Nav className="flex-column">
         <h3>Termos e Políticas</h3>
         <Nav.Item>
-          <Link to={"#"}>Política de Privacidade</Link>
+          <Link to={"/WIP"}>Política de Privacidade</Link>
         </Nav.Item>
         <Nav.Item>
-          <Link to={"#"}>Termos de Uso</Link>
+          <Link to={"/WIP"}>Termos de Uso</Link>
         </Nav.Item>
       </Nav>
 
-      <Nav.Item href="/">
+      <Nav.Item>
         <Link to={"/"}>
           <img className="footerImage" src={logo} alt="logo" />
         </Link>
