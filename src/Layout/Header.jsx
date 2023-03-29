@@ -1,5 +1,6 @@
 import * as react from "react";
 import { Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 /* folha css */
 import "../Styles/header.css";
@@ -11,28 +12,29 @@ const Header = () => {
   return (
     <div className="headerstyle">
       <Nav className="justify-content-center">
-        <Nav.Link className="button" href="/">
-          <img className="logostyle" src={Logo} alt="logotipo" />
-        </Nav.Link>
-        <Nav.Link className="button" href="./bebidas">
+        <Nav.Item className="button">
+          <Link to={"/"}>
+            <img className="logostyle" src={Logo} alt="logotipo" />
+          </Link>
+        </Nav.Item>
+        <Nav.Item className="button">
+          <Link to={"/bebidas"}>Bebidas</Link>
+        </Nav.Item>
+        <Nav.Item className="button">
           {" "}
-          Bebidas{" "}
-        </Nav.Link>
-        <Nav.Link className="button" href="./caixas">
-          {" "}
-          Caixas{" "}
-        </Nav.Link>
-        <Nav.Link className="button" href="#">
-          {" "}
-          Sobre{" "}
-        </Nav.Link>
-        <Nav.Link className="button" href="#">
-          {" "}
-          Contato{" "}
-        </Nav.Link>
-        <Nav.Link className="button" href="#">
-          <img className="cartstyle" src={Carrinho} alt="carrinho de compras" />
-        </Nav.Link>
+          <Link to={"/caixas"}>Caixas</Link>
+        </Nav.Item>
+        <Nav.Item className="button"> Sobre </Nav.Item>
+        <Nav.Item className="button"> Contato </Nav.Item>
+        <Nav.Item className="button">
+          <Link to={"/"}>
+            <img
+              className="cartstyle"
+              src={Carrinho}
+              alt="carrinho de compras"
+            />
+          </Link>
+        </Nav.Item>
       </Nav>
     </div>
   );

@@ -6,6 +6,7 @@ import { Nav } from "react-bootstrap";
 import "../Styles/footer.css";
 
 import logo from "../Assets/Logo1.png";
+import { Link } from "react-router-dom";
 
 /*
     Exemplo de um Layout simples do footer. 
@@ -20,26 +21,42 @@ const Footer = () => {
     <div className="footerBackground">
       <Nav className="flex-column">
         <h3>Ajuda</h3>
-        <Nav.Link href="#">Preciso de Ajuda</Nav.Link>
-        <Nav.Link href="#">Perguntas Comuns</Nav.Link>
-        <Nav.Link href="#">SAC</Nav.Link>
+        <Nav.Item>
+          <Link to={"#"}>Preciso de Ajuda</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to={"#"}>Preguntas comuns</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to={"#"}>SAC</Link>
+        </Nav.Item>
       </Nav>
 
       <Nav className="flex-column">
         <h3>Contato</h3>
-        <Nav.Link href="#">Sobre nós</Nav.Link>
-        <Nav.Link href="#">Contatos</Nav.Link>
+        <Nav.Item>
+          <Link to={"#"}>Sobre nós</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to={"#"}>Contatos</Link>
+        </Nav.Item>
       </Nav>
 
       <Nav className="flex-column">
         <h3>Termos e Políticas</h3>
-        <Nav.Link href="#">Política de Privacidade</Nav.Link>
-        <Nav.Link href="/amongus">Termos de Uso</Nav.Link>
+        <Nav.Item>
+          <Link to={"#"}>Política de Privacidade</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to={"#"}>Termos de Uso</Link>
+        </Nav.Item>
       </Nav>
 
-      <Nav.Link href="/">
-        <img className="footerImage" src={logo} alt="logo" />
-      </Nav.Link>
+      <Nav.Item href="/">
+        <Link to={"/"}>
+          <img className="footerImage" src={logo} alt="logo" />
+        </Link>
+      </Nav.Item>
     </div>
   );
 };
