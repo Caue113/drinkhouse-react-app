@@ -10,6 +10,8 @@ import BotaoComprar from "../Components/BotaoComprar";
 
 
 import "../Styles/Bebida.css"
+import BebidaCard from "../Components/BebidaCard";
+import BebidasRelacionadas from "../Layout/BebidasRelacionadas";
 
 
 let tempBebida = {
@@ -119,11 +121,8 @@ function Bebida (){
                 <div className="row">
                     <h2>Bebidas Relacionadas</h2>
 
-                    <div className="d-flex flex-direction-row">
-                        <img src="https://placekitten.com/g/100/100" className=""></img>
-                        <img src="https://placekitten.com/g/100/100" className=""></img>
-                        <img src="https://placekitten.com/g/100/100" className=""></img>
-                        <img src="https://placekitten.com/g/100/100" className=""></img>
+                    <div className="d-flex flex-direction-row justify-content-around">
+                        <BebidasRelacionadas />
                     </div>
 
                 </div>
