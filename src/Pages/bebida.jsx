@@ -1,10 +1,25 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Button, Carousel, Nav } from "react-bootstrap";
 import { json, Link, Outlet, useLoaderData, useParams } from "react-router-dom";
 import "./bebida.css";
 import Header from "../Layout/Header.jsx";
 import Footer from "../Layout/Footer.jsx";
+
+import NivelAlcoolicoGotas from "../Components/NivelAlcoolicoGotas.jsx"
+import BotaoComprar from "../Components/BotaoComprar";
+
+
+import "../Styles/Bebida.css"
+
+
+let tempBebida = {
+    marca: "Skol",
+    preco: 140,
+    volume: 297,
+    porcentagemAlcoolica: 5,
+    promocao: null,
+    estoque: null,
+}
 
 
 export async function loader({ params }){
@@ -30,29 +45,16 @@ export async function loader({ params }){
 
 function promocaoElement(){
 
-    let hasPromocao;
+    let hasPromocao = tempBebida.promocao;
 
     if(hasPromocao){
         return(
-            <p> Promoção de 20% </p>
+            <p> Promoção de {tempBebida.promocao} </p>
         );
     }
-
-    
 }
 
-function buttonState(){
-    let button;
-    let hasInStock = true;  //Pegar valor da database
 
-    if(hasInStock){
-        button = <Button>Comprar</Button>
-    }
-    else{
-        button = <Button disabled={true}>Fora de Estoque</Button>
-    }
-    return(button);
-}
 
 
 function Bebida (){
@@ -76,51 +78,42 @@ function Bebida (){
             <Header></Header>
             <main className="container">
 
-                <div className="row">
-                    <h1>{SQL_DATA[0].nome}</h1>
+                <div className="row text-center">
+                    <h1 className="font__bigger">{SQL_DATA[0].nome}</h1>
                 </div>
 
                 <div className="row" style={{backgroundColor: "orange"}}>
-                    <div className="d-flex flex-row">
-                        <div>
-                            <img src="https://placekitten.com/g/200/300" class="img-fluid" alt="bebida"></img>
-                        </div>
 
+                    <div className="col-4 text-center img-fluid">
+                        <img src="https://placekitten.com/g/200/300" class="img-fluid" alt="bebida"></img>
+                    </div>
+
+                    <div className="col-8">
                         <div className="d-flex flex-column">
-                            <h2 className="text-center">{SQL_DATA[0].nome} - Marca X</h2>
+                            <h2 className="text-center font__big">{SQL_DATA[0].nome} - {tempBebida.marca}</h2>
                             {promocaoElement()}
                             
                             <div className="d-flex flex-row">
-                                <div className="col-4">
-                                    <p>Preço: R$ {"preco"}</p>
+                                <div className="">
+                                    <p>Preço: R$ {tempBebida.preco}</p>
                                     
                                 </div>
-                                <div className="col-4">
-                                    <p>Volume: R$ {"volume"}</p>
+                                <div className="">
+                                    <p>Volume: R$ {tempBebida.volume} ml</p>
                                 </div>
                             </div>
 
                             <div className="d-flex flex-row">
                                 <div className="col-12">
-                                    <p>Porcentagem Alcoolica</p>
-                                    <div>
-                                        {"QuantidadeGotasAlcoolico"}
-                                    </div>
+                                    <p>Porcentagem Alcoolica <span>{tempBebida.porcentagemAlcoolica}%</span></p>
+                                    <NivelAlcoolicoGotas nivelAlcoolico={tempBebida.porcentagemAlcoolica}/>
                                 </div>
                             </div>
 
-                            <div className="d-flex flex-row">
-                                <div className="col-12">
-                                    <p>Porcentagem Alcoolica</p>
-                                    <div>
-                                        {"QuantidadeGotasAlcoolicoComponente"}
-                                    </div>
-                                </div>
-                            </div>
-                            {buttonState()}
+                            <BotaoComprar estoque={tempBebida.estoque}/>
                         </div>
-
                     </div>
+                    
                 </div>
 
                 <div className="row">
@@ -135,6 +128,7 @@ function Bebida (){
 
                 </div>
             </main>
+
             <Footer></Footer>
         </>
         
