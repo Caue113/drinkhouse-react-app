@@ -7,31 +7,44 @@ import "../Styles/header.css";
 
 import Logo from "../Assets/Logo1.png";
 import Carrinho from "../Assets/carrinho.png";
-
+/* <Nav className="justify-content-center"> </Nav>*/
 const Header = () => {
   return (
-    <div className="headerstyle">
-      <Nav className="justify-content-center">
+    <div>
+      <Nav
+        className="navbar navbar-light"
+        style={{ backgroundColor: "#D45C39" }}
+      >
         <Nav.Item className="button">
           <Link to={"/"}>
             <img className="logostyle" src={Logo} alt="logotipo" />
           </Link>
         </Nav.Item>
-        <Nav.Item className="button">
-          <Link to={"/bebidas"}>Bebidas</Link>
+
+        <Nav.Item className="nav-link active">
+          <Link to={"/bebidas"} class="text-light">
+            Bebidas
+          </Link>
         </Nav.Item>
-        <Nav.Item className="button">
+        <Nav.Item className="nav-link active">
           {" "}
-          <Link to={"/caixas"}>Caixas</Link>
+          <Link to={"/caixas"} class="text-light">
+            Caixas
+          </Link>
         </Nav.Item>
-        <Nav.Item className="button">
+        <Nav.Item className="nav-link active">
           {" "}
-          <Link to={"/WIP"}>Sobre</Link>
+          <Link to={"/WIP"} class="text-light">
+            Sobre
+          </Link>
         </Nav.Item>
-        <Nav.Item className="button">
+        <Nav.Item className="nav-link active">
           {" "}
-          <Link to={"/WIP"}>Contato</Link>
+          <Link to={"/WIP"} class="text-light">
+            Contato
+          </Link>
         </Nav.Item>
+
         <Nav.Item className="button">
           <Link to={"/WIP"}>
             <img
