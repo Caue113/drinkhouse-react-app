@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 
 function BebidaCard(props){
 
-    let route = "/bebida/"
+    let ROUTE = "/bebida/"
 
     return(
         <Card>
@@ -12,7 +12,7 @@ function BebidaCard(props){
                 <Card.Title>{props.name}</Card.Title>
             </Card.Header>
 
-            <Link to={route + props.bebidaId}>
+            <Link to={ROUTE + props.bebidaId}>
                 <Card.Body>
                     <Card.Img src={props.imageURL}/>
                 </Card.Body>

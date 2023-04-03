@@ -1,7 +1,11 @@
 import React from "react";
 
+import "../Styles/NivelAlcoolicoGotas.css"
+
 import dripOff from "../Assets/drop.png"
 import dripOn from "../Assets/drop2.png"
+
+
 
 function NivelAlcoolicoGotas(props){
     let gotas = [];
@@ -17,15 +21,15 @@ function NivelAlcoolicoGotas(props){
 
     NiveisAlcool.map((nivel) =>{
         if(props.nivelAlcoolico >= nivel){
-            gotas.push(<img src={dripOn} width="64px"/>);
+            gotas.push(<img src={dripOn} width="20%"/>);
         }
         else{
-            gotas.push(<img src={dripOff} width="64px"/>);
+            gotas.push(<img src={dripOff} width="20%"/>);
         }
     })
 
     return(
-        <div style={{backgroundColor: "white", borderRadius: "30px", padding:"10px"}}>
+        <div className="gotas-background">
             <img src="../sr" alt="" />
             {gotas}
         </div>

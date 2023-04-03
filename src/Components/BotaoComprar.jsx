@@ -1,5 +1,10 @@
-import { Button } from "react-bootstrap";
 import React from "react";
+import { Button } from "react-bootstrap";
+
+function addProdutoCarrinhoSession(id){
+    sessionStorage.setItem("produtoId",id);
+    console.log("Adicionado produto!");
+}
 
 function BotaoComprar(props){
     let button;
@@ -8,7 +13,7 @@ function BotaoComprar(props){
         button = <Button disabled={true}>Fora de Estoque</Button>
     }
     else{
-        button = <Button>Comprar</Button>
+        button = <Button onClick={()=>{addProdutoCarrinhoSession(props.id)}}>Comprar</Button>
     }
 
     return(

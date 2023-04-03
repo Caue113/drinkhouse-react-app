@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { json, Link, Outlet, useLoaderData, useParams } from "react-router-dom";
-import "./bebida.css";
+import "../Styles/Bebida.css";
 import Header from "../Layout/Header.jsx";
 import Footer from "../Layout/Footer.jsx";
 
@@ -13,15 +13,21 @@ import "../Styles/Bebida.css"
 import BebidaCard from "../Components/BebidaCard";
 import BebidasRelacionadas from "../Layout/BebidasRelacionadas";
 
+import * as session from "../Js/Session";
 
+/**
+ * TO DO - REMOVE TEMP VALUES BELOW
+ */
 let tempBebida = {
     marca: "Skol",
     preco: 140,
     volume: 297,
     porcentagemAlcoolica: 5,
     promocao: null,
-    estoque: null,
+    estoque: 1,
 }
+
+
 
 
 export async function loader({ params }){
@@ -75,44 +81,52 @@ function Bebida (){
         );
     }
     
+        
+    console.log("TESTE")
     return(
         <>
             <Header></Header>
             <main className="container">
 
                 <div className="row text-center">
-                    <h1 className="font__bigger">{SQL_DATA[0].nome}</h1>
+                    <h1 className="bebida-titulo">{SQL_DATA[0].nome}</h1>
                 </div>
 
-                <div className="row" style={{backgroundColor: "orange"}}>
+                <div className="row informacoes">
 
-                    <div className="col-4 text-center img-fluid">
-                        <img src="https://placekitten.com/g/200/300" class="img-fluid" alt="bebida"></img>
+                    <div className="col-4">
+                        <img src="https://placekitten.com/g/100/200" class="img-fluid bebida-imagem" alt="bebida"></img>
                     </div>
 
                     <div className="col-8">
                         <div className="d-flex flex-column">
-                            <h2 className="text-center font__big">{SQL_DATA[0].nome} - {tempBebida.marca}</h2>
+                            <h2 className="text-center informacoes-titulo">{SQL_DATA[0].nome} - {tempBebida.marca}</h2>
+                            
                             {promocaoElement()}
                             
-                            <div className="d-flex flex-row">
-                                <div className="">
-                                    <p>Preço: R$ {tempBebida.preco}</p>
-                                    
+                            <div className="d-flex flex-column dados">
+
+                                <div className="dados-produto">
+                                    <p>Preço: <span className="informacoes-destaque">R$ {tempBebida.preco}</span></p>    
                                 </div>
-                                <div className="">
-                                    <p>Volume: R$ {tempBebida.volume} ml</p>
+
+                                <div className="dados-produto">
+                                    <p>Volume: <span className="informacoes-destaque">{tempBebida.volume} ml </span></p>
                                 </div>
                             </div>
 
                             <div className="d-flex flex-row">
-                                <div className="col-12">
-                                    <p>Porcentagem Alcoolica <span>{tempBebida.porcentagemAlcoolica}%</span></p>
+                                <div className="dados">
+                                    <p className="text-center dados-produto ">Porcentagem Alcoolica - <span>{tempBebida.porcentagemAlcoolica}%</span></p>
                                     <NivelAlcoolicoGotas nivelAlcoolico={tempBebida.porcentagemAlcoolica}/>
                                 </div>
                             </div>
 
-                            <BotaoComprar estoque={tempBebida.estoque}/>
+                            <div className="d-flex flex-row justify-content-end">
+                                <BotaoComprar className="align-self-center" 
+                                    estoque={tempBebida.estoque}
+                                    id={SQL_DATA[0].bebidaId}/>
+                            </div>
                         </div>
                     </div>
                     
