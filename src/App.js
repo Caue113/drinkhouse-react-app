@@ -25,12 +25,11 @@ import ze from "./Assets/zeDelivery.png";
 import ifood from "./Assets/ifood.png";
 
 /* import de componentes */
-import AlertTest from './Layout/AlertTest';
-import DivDB from './Components/_divDatabaseTest';
-import Footer from './Layout/Footer';
-import Header from './Layout/Header.jsx';
-import { Button } from 'react-bootstrap';
-
+import AlertTest from "./Layout/AlertTest";
+import DivDB from "./Components/_divDatabaseTest";
+import Footer from "./Layout/Footer";
+import Header from "./Layout/Header.jsx";
+import { Button } from "react-bootstrap";
 
 function App() {
   const [message, setMessage] = useState("");
@@ -43,16 +42,16 @@ function App() {
   }, []);
 
   return (
-  <>
-    <main className="App">
-      <Header/>
+    <>
+      <main className="App">
+        <Header />
 
-      <div className='firstContainer'>
-        <h1 className='title'>Sede</h1>
-        <h3 className='subtitle'>Sacie-se com</h3> 
-        <h3 className='underscoreSubtitle'>The Drink House</h3>
-        <img className='titleImage' src={titleImage} alt='image'/>
-      </div>
+        <div className="firstContainer">
+          <h1 className="title">Sede</h1>
+          <h3 className="subtitle">Sacie-se com</h3>
+          <h3 className="underscoreSubtitle">The Drink House</h3>
+          <img className="titleImage" src={titleImage} alt="image" />
+        </div>
 
         <div className="mainSearch">
           <Nav.Link className="searches"> Cervejas </Nav.Link>

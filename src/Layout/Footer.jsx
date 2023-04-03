@@ -19,36 +19,50 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footerBackground">
-      <Nav className="flex-column">
-        <h3>Ajuda</h3>
+      <Nav className="flex-column" style={{ backgroundColor: "#000" }}>
+        <h3 className="footerTitles">Ajuda</h3>
         <Nav.Item>
-          <Link to={"/WIP"}>Preciso de Ajuda</Link>
+          <Link class="text-light" to={"/WIP"}>
+            Preciso de Ajuda
+          </Link>
         </Nav.Item>
         <Nav.Item>
-          <Link to={"/WIP"}>Preguntas comuns</Link>
+          <Link class="text-light" to={"/WIP"}>
+            Preguntas comuns
+          </Link>
         </Nav.Item>
         <Nav.Item>
-          <Link to={"/WIP"}>SAC</Link>
-        </Nav.Item>
-      </Nav>
-
-      <Nav className="flex-column">
-        <h3>Contato</h3>
-        <Nav.Item>
-          <Link to={"/WIP"}>Sobre nós</Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Link to={"/WIP"}>Contatos</Link>
+          <Link class="text-light" to={"/WIP"}>
+            SAC
+          </Link>
         </Nav.Item>
       </Nav>
 
-      <Nav className="flex-column">
-        <h3>Termos e Políticas</h3>
+      <Nav className="flex-column" style={{ backgroundColor: "#000" }}>
+        <h3 className="footerTitles">Contato</h3>
         <Nav.Item>
-          <Link to={"/WIP"}>Política de Privacidade</Link>
+          <Link class="text-light" to={"/WIP"}>
+            Sobre nós
+          </Link>
         </Nav.Item>
         <Nav.Item>
-          <Link to={"/WIP"}>Termos de Uso</Link>
+          <Link class="text-light" to={"/WIP"}>
+            Contatos
+          </Link>
+        </Nav.Item>
+      </Nav>
+
+      <Nav className="flex-column" style={{ backgroundColor: "#000" }}>
+        <h3 className="footerTitles">Termos e Políticas</h3>
+        <Nav.Item>
+          <Link class="text-light" to={"/WIP"}>
+            Política de Privacidade
+          </Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link class="text-light" to={"/WIP"}>
+            Termos de Uso
+          </Link>
         </Nav.Item>
       </Nav>
 
