@@ -29,6 +29,7 @@ import ifood from './Assets/ifood.png';
 import AlertTest from './Layout/AlertTest';
 import DivDB from './Components/_divDatabaseTest';
 import Footer from './Layout/Footer';
+import Header from './Layout/Header.jsx';
 import { Button } from 'react-bootstrap';
 
 
@@ -47,6 +48,7 @@ function App() {
   return (
   <>
     <main className="App">
+      <Header/>
 
       <div className='firstContainer'>
         <h1 className='title'>Sede</h1>
