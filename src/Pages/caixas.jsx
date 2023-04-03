@@ -3,12 +3,13 @@ import { Nav } from "react-bootstrap";
 
 /* importe de imagens */
 import caixa from "../Assets/caixa.jpg";
-
+import Header from "../Layout/Header";
 import "./caixas.css";
 
 function Caixas() {
   return (
     <div>
+      <Header />
       <h1>Desvenda a curiosidade com Lootboxes</h1>
 
       <h2>Conheça as Lootboxes</h2>
