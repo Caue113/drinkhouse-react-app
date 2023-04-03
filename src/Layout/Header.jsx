@@ -1,35 +1,62 @@
-import * as react from 'react';
-import { Nav } from 'react-bootstrap';
+import * as react from "react";
+import { Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 /* folha css */
-import '../Styles/header.css';
+import "../Styles/header.css";
 
-
-import Logo from '../Assets/Logo1.png'
-import Carrinho from '../Assets/carrinho.png';
-
+import Logo from "../Assets/Logo1.png";
+import Carrinho from "../Assets/carrinho.png";
+/* <Nav className="justify-content-center"> </Nav>*/
 const Header = () => {
-    return(
-        <div className='headerstyle'>
-            <Nav className='justify-content-center'>
-                <img className='logostyle'src={Logo} alt='logotipo'/>
-                <Nav.Link className='button' href='#'> Bebidas </Nav.Link>
-                <Nav.Link className='button' href='#'> Caixas </Nav.Link>
-                <Nav.Link className='button' href='#'> Sobre </Nav.Link>
-                <Nav.Link className='button' href='#'> Contato </Nav.Link>
-                <img className='cartstyle'src={Carrinho} alt='carrinho de compras'/>
-            </Nav>
-        </div>
-    );
-}
+  return (
+    <div>
+      <Nav
+        className="navbar navbar-light"
+        style={{ backgroundColor: "#D45C39" }}
+      >
+        <Nav.Item className="button">
+          <Link to={"/"}>
+            <img className="logostyle" src={Logo} alt="logotipo" />
+          </Link>
+        </Nav.Item>
+
+        <Nav.Item className="nav-link active">
+          <Link to={"/bebidas"} class="text-light">
+            Bebidas
+          </Link>
+        </Nav.Item>
+        <Nav.Item className="nav-link active">
+          {" "}
+          <Link to={"/caixas"} class="text-light">
+            Caixas
+          </Link>
+        </Nav.Item>
+        <Nav.Item className="nav-link active">
+          {" "}
+          <Link to={"/WIP"} class="text-light">
+            Sobre
+          </Link>
+        </Nav.Item>
+        <Nav.Item className="nav-link active">
+          {" "}
+          <Link to={"/WIP"} class="text-light">
+            Contato
+          </Link>
+        </Nav.Item>
+
+        <Nav.Item className="button">
+          <Link to={"/WIP"}>
+            <img
+              className="cartstyle"
+              src={Carrinho}
+              alt="carrinho de compras"
+            />
+          </Link>
+        </Nav.Item>
+      </Nav>
+    </div>
+  );
+};
 
 export default Header;
-
-
-
-
-
-
-
-
-
