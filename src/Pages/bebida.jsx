@@ -13,8 +13,6 @@ import "../Styles/Bebida.css"
 import BebidaCard from "../Components/BebidaCard";
 import BebidasRelacionadas from "../Layout/BebidasRelacionadas";
 
-import * as session from "../Js/Session";
-
 /**
  * TO DO - REMOVE TEMP VALUES BELOW
  */
