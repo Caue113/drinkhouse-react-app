@@ -82,7 +82,7 @@ function Bebida (){
             <main className="container">
 
                 <div className="row text-center">
-                    <h1 className="bebida-titulo">{SQL_DATA[0].nome}</h1>
+                    <h1 className="bebida-titulo">{row.NomeBebida}</h1>
                 </div>
 
                 <div className="row informacoes">
@@ -118,7 +118,7 @@ function Bebida (){
                             <div className="d-flex flex-row justify-content-end">
                                 <BotaoComprar className="align-self-center" 
                                     estoque={row.estoque}
-                                    id={SQL_DATA[0].bebidaId}/>
+                                    id={row.id}/>
                             </div>
                         </div>
                     </div>
