@@ -22,25 +22,25 @@ const Header = () => {
         </Nav.Item>
 
         <Nav.Item className="nav-link active">
-          <Link to={"/bebidas"} class="text-light">
+          <Link style={{ fontSize: "40px" }} to={"/bebidas"} class="text-light">
             Bebidas
           </Link>
         </Nav.Item>
         <Nav.Item className="nav-link active">
           {" "}
-          <Link to={"/caixas"} class="text-light">
+          <Link style={{ fontSize: "40px" }} to={"/caixas"} class="text-light">
             Caixas
           </Link>
         </Nav.Item>
         <Nav.Item className="nav-link active">
           {" "}
-          <Link to={"/WIP"} class="text-light">
+          <Link style={{ fontSize: "40px" }} to={"/WIP"} class="text-light">
             Sobre
           </Link>
         </Nav.Item>
         <Nav.Item className="nav-link active">
           {" "}
-          <Link to={"/WIP"} class="text-light">
+          <Link style={{ fontSize: "40px" }} to={"/WIP"} class="text-light">
             Contato
           </Link>
         </Nav.Item>
