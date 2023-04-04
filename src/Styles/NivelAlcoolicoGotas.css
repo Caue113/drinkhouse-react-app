@@ -1,0 +1,10 @@
+.gotas-background{
+    display: flex;
+    justify-content: center;
+    
+    background-color: white;
+    border-radius: 30px;
+    
+    padding: 1rem;
+    margin: 0rem 2rem;
+}
