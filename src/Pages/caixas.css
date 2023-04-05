@@ -1,4 +1,16 @@
 .Direita {
   display: flex;
   justify-content: right;
+  margin: 2px 10px 60px 10px;
+  background-color: #eb984b;
+}
+
+.Title {
+  background-color: #fff;
+  text-align: center;
+  font-size: 100px;
+}
+
+.Container {
+  margin: 10px 10px 60px 10px;
 }
