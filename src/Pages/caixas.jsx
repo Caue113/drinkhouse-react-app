@@ -2,10 +2,16 @@ import React from "react";
 import { Nav } from "react-bootstrap";
 
 /* importe de imagens */
-import caixa from "../Assets/caixa.jpg";
+import caixa from "../Assets/Caixa.png"
+
+import caixa1 from "../Assets/greenMysteryBox.png"
+import caixa2 from "../Assets/niggerMisteryBox.png"
+import caixa3 from "../Assets/blueMysteryBox.png"
+import caixa4 from "../Assets/redMysteryBox.png"
+
 import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
-import "./caixas.css";
+import "../Styles/caixas.css";
 
 function Caixas() {
   return (
@@ -42,7 +48,7 @@ function Caixas() {
           As Lootboxes são uma forma diferente de apimentar festas e reuniões
           com bebidas sortidas que agradam o sabor da galera.
         </p>
-        <img width={400} height={250} src={caixa} alt="Caixa" />
+        <img width={300} height={300} src={caixa} alt="Caixa" />
       </div>
 
       <div
@@ -68,19 +74,19 @@ function Caixas() {
           }}
         >
           <a href="#">
-            <img width={400} height={250} src={caixa} alt="Case Misteriosa" />
+            <img width={300} height={300} src={caixa1} alt="Case Misteriosa" />
             <p class="text-center" style={{ color: "#fff" }}>
               Case Misteriosa
             </p>
           </a>
           <a href="#">
-            <img width={400} height={250} src={caixa} alt="Case Refinado" />
+            <img width={300} height={300} src={caixa3} alt="Case Refinado" />
             <p class="text-center" style={{ color: "#fff" }}>
               Case Refinado
             </p>
           </a>
           <a href="#">
-            <img width={400} height={250} src={caixa} alt="Case Kids" />
+            <img width={300} height={300} src={caixa4} alt="Case Kids" />
             <p class="text-center" style={{ color: "#fff" }}>
               Case Kids
             </p>
@@ -116,59 +122,64 @@ function Caixas() {
         >
           <div>
             <a href="#">
-              <h3>Básico</h3>
+              <h3>Standart</h3>
               <p>Um pequeno agrado mensal</p>
-              <p>R$ 00,00</p>
-              <img width={300} height={150} src={caixa} alt="Case" />
+              <p>R$ 74.90</p>
+              <img width={200} height={200} src={caixa1} alt="Case" />
             </a>
             <p>Inclui: </p>
             <ul>
-              <li>Cervajas</li>
-              <li>Chopes</li>
-              <li>Refrigerantes</li>
+              <li>2 Cervajas</li>
+              <li>2 destilados</li>
+              <li>2 Refrigerantes</li>
             </ul>
           </div>
           <div>
             <a href="#">
-              <h3>Fámilia</h3>
-              <p>Para dividir com todos</p>
-              <p>R$ 00,00</p>
-              <img width={300} height={150} src={caixa} alt="Case" />
+              <h3>Bebidas Finas</h3>
+              <p>Para aquele encontro marcante</p>
+              <p>R$ 454,50</p>
+              <img width={200} height={200} src={caixa3} alt="Case" />
             </a>
             <p>Inclui: </p>
             <ul>
-              <li>Cervajas</li>
-              <li>Chopes</li>
-              <li>Refrigerantes</li>
-              <li>1 brinde</li>
+              <li>1 vinho tinto</li>
+              <li>1 vinho seco</li>
+              <li>1 vinho branco</li>
+              <li>2 champangnhes</li>
+              <li>2 taças de 450ml</li>
             </ul>
           </div>
           <div>
             <a href="#">
-              <h3>Refinado</h3>
-              <p>Seleção única de vinhos e Champangnhes</p>
-              <p>R$ 00,00</p>
-              <img width={300} height={150} src={caixa} alt="Case" />
+              <h3>Destilados diversos</h3>
+              <p>Para os mais exigentes paladares</p>
+              <p>R$ 415,98</p>
+              <img width={200} height={200} src={caixa2} alt="Case" />
             </a>
             <p>Inclui: </p>
             <ul>
-              <li>Vinhos brancos</li>
-              <li>Chopes</li>
-              <li>Refrigerantes</li>
-              <li>1 brinde</li>
+              <li>1 cachaça branca</li>
+              <li>1 cachaça dourada</li>
+              <li>2 conhaques </li>
+              <li>2 Whiskeys </li>
+              <li>2 vodkas </li>
+              <li>6 copos de 60ml</li>
             </ul>
           </div>
           <div>
             <a href="#">
               <h3>Kids</h3>
               <p>A garotada também incluída</p>
-              <p>R$ 00,00</p>
-              <img width={300} height={150} src={caixa} alt="Case" />
+              <p>R$ 99,98</p>
+              <img width={200} height={200} src={caixa4} alt="Case" />
             </a>
             <p>Inclui: </p>
             <ul>
-              <li>Guaranás</li>
-              <li>Mini-Guaranás</li>
+              <li>2 refrigerantes de 2L</li>
+              <li>2 sucos de 2L</li>
+              <li>1 refrigerante de 450ml</li>
+              <li>1 suco de 450ml </li>
             </ul>
           </div>
         </div>
