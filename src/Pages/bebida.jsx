@@ -13,29 +13,14 @@ import "../Styles/Bebida.css"
 import BebidaCard from "../Components/BebidaCard";
 import BebidasRelacionadas from "../Layout/BebidasRelacionadas";
 
-/**
- * TO DO - REMOVE TEMP VALUES BELOW
- */
-let tempBebida = {
-    marca: "Skol",
-    preco: 140,
-    volume: 297,
-    porcentagemAlcoolica: 5,
-    promocao: null,
-    estoque: 1,
-}
-
-
-
-
 export async function loader({ params }){
     console.log("Rodando PARAMS de LOADER");
-    console.log(params);
+    console.log(params); 
 
     let SQL_RESULT;
 
     try {
-        await axios.get(`http://localhost:3002/bebidas/bebida/${params.bebidaId}`)
+        await axios.get(`http://localhost:3002/bebida/${params.bebidaId}`)
                 .then((res) =>{
                     SQL_RESULT = res.data;
                 });
@@ -48,25 +33,35 @@ export async function loader({ params }){
 
 }
 
-
+/* 
 function promocaoElement(){
 
-    let hasPromocao = tempBebida.promocao;
+    let hasPromocao = row.promocao;
 
     if(hasPromocao){
         return(
-            <p> Promoção de {tempBebida.promocao} </p>
+            <p> Promoção de {row.promocao} </p>
         );
     }
 }
+ */
 
-
-
+/**
+ * Formatador de preço para BRL
+ * @returns {String} Valor formatado
+ */
+const CurrencyFormatBRL = Intl.NumberFormat("pt-BR",{style:"currency", currency:"BRL"});
 
 function Bebida (){
     const SQL_DATA = useLoaderData();
+    let row;
     console.log(SQL_DATA)
-    console.log(SQL_DATA[0].nome)
+    
+    if(SQL_DATA[0]){
+        row = SQL_DATA[0]
+        console.log(row)
+    }
+    
 
 
     //Lógica temporária. Deve ser feita em outro ambiente
@@ -87,7 +82,7 @@ function Bebida (){
             <main className="container">
 
                 <div className="row text-center">
-                    <h1 className="bebida-titulo">{SQL_DATA[0].nome}</h1>
+                    <h1 className="bebida-titulo">{row.NomeBebida}</h1>
                 </div>
 
                 <div className="row informacoes">
@@ -98,32 +93,32 @@ function Bebida (){
 
                     <div className="col-8">
                         <div className="d-flex flex-column">
-                            <h2 className="text-center informacoes-titulo">{SQL_DATA[0].nome} - {tempBebida.marca}</h2>
+                            <h2 className="text-center informacoes-titulo">{row.NomeBebida} - {row.Marca}</h2>
                             
-                            {promocaoElement()}
+                            {/* {promocaoElement()} */}
                             
                             <div className="d-flex flex-column dados">
 
                                 <div className="dados-produto">
-                                    <p>Preço: <span className="informacoes-destaque">R$ {tempBebida.preco}</span></p>    
+                                    <p>Preço: <span className="informacoes-destaque">{CurrencyFormatBRL.format(row.Preco)}</span></p>    
                                 </div>
 
                                 <div className="dados-produto">
-                                    <p>Volume: <span className="informacoes-destaque">{tempBebida.volume} ml </span></p>
+                                    <p>Volume: <span className="informacoes-destaque">{row.Volume}</span></p>
                                 </div>
                             </div>
 
                             <div className="d-flex flex-row">
                                 <div className="dados">
-                                    <p className="text-center dados-produto ">Porcentagem Alcoolica - <span>{tempBebida.porcentagemAlcoolica}%</span></p>
-                                    <NivelAlcoolicoGotas nivelAlcoolico={tempBebida.porcentagemAlcoolica}/>
+                                    <p className="text-center dados-produto ">Porcentagem Alcoolica - <span>{row.TeorAlcoolico}%</span></p>
+                                    <NivelAlcoolicoGotas nivelAlcoolico={row.TeorAlcoolico}/>
                                 </div>
                             </div>
 
                             <div className="d-flex flex-row justify-content-end">
                                 <BotaoComprar className="align-self-center" 
-                                    estoque={tempBebida.estoque}
-                                    id={SQL_DATA[0].bebidaId}/>
+                                    estoque={row.estoque}
+                                    id={row.id}/>
                             </div>
                         </div>
                     </div>

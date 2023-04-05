@@ -2,7 +2,9 @@ import React from "react";
 import { Button } from "react-bootstrap";
 
 function addProdutoCarrinhoSession(id){
-    sessionStorage.setItem("produtoId",id);
+    //Backend - Adaptar para usar sistema de SESSION
+    //Código para adicionar no carrinho.
+    //sessionStorage.setItem("produtoId",id);
     console.log("Adicionado produto!");
 }
 
