@@ -10,7 +10,7 @@ import "./index.css";
 import ErrorPage from "./Pages/errorPage";
 import NavigationTest from "./Pages/navigationTest";
 import Bebidas from "./Pages/bebidas";
-import Bebida, { loader as bebidaLoader } from "./Pages/Bebida";
+import Bebida, { loader as bebidaLoader } from "./Pages/bebida";
 import Caixas from "./Pages/caixas";
 import WIP from "./Pages/WIP";
 
