@@ -1,12 +1,12 @@
 import React from "react";
 
 /* importe de imagens */
-import caixa from "../Assets/Caixa.png";
+import caixa from "../Assets/Boxes/Caixa.png";
 
-import caixa1 from "../Assets/greenMysteryBox.png";
-import caixa2 from "../Assets/niggerMisteryBox.png";
-import caixa3 from "../Assets/blueMysteryBox.png";
-import caixa4 from "../Assets/redMysteryBox.png";
+import caixa1 from "../Assets/Boxes/greenMysteryBox.png";
+import caixa2 from "../Assets/Boxes/blackMisteryBox.png";
+import caixa3 from "../Assets/Boxes/blueMysteryBox.png";
+import caixa4 from "../Assets/Boxes/redMysteryBox.png";
 
 import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";

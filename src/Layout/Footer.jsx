@@ -5,7 +5,7 @@ import { Nav } from "react-bootstrap";
 
 import "../Styles/footer.css";
 
-import logo from "../Assets/Logo1.png";
+import logo from "../Assets/Logos/Logo1.png";
 import { Link } from "react-router-dom";
 
 /*

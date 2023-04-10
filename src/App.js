@@ -4,24 +4,24 @@ import "./App.css";
 
 /* importe das imagens da tela principal */
 import titleImage from "./Assets/image1.png";
-import logo2 from "./Assets/Logo2.png";
+import logo2 from "./Assets/Logos/Logo2.png";
 
 /* import das logos das cervejas */
-import brahmaLogo from "./Assets/Brahma.png";
-import heinekenLogo from "./Assets/Heineken.png";
-import antarcticaLogo from "./Assets/Antarctica.png";
-import bohemiaLogo from "./Assets/Bohemia.png";
-import skolLogo from "./Assets/Skol.png";
-import budweiserLogo from "./Assets/Budweiser.png";
-import coronaLogo from "./Assets/Corona.png";
+import brahmaLogo from "./Assets/Logos/Brahma.png";
+import heinekenLogo from "./Assets/Logos/Heineken.png";
+import antarcticaLogo from "./Assets/Logos/Antarctica.png";
+import bohemiaLogo from "./Assets/Logos/Bohemia.png";
+import skolLogo from "./Assets/Logos/Skol.png";
+import budweiserLogo from "./Assets/Logos/Budweiser.png";
+import coronaLogo from "./Assets/Logos/Corona.png";
 
 /* import de imagens uteis */
-import caixa from "./Assets/Caixa.png";
+import caixa from "./Assets/Boxes/Caixa.png";
 import mapa from "./Assets/local.png";
-import cell from "./Assets/Cell.png";
-import zap from "./Assets/Whatsapp.png";
-import ze from "./Assets/zeDelivery.png";
-import ifood from "./Assets/ifood.png";
+import cell from "./Assets/Icons/Cell.png";
+import zap from "./Assets/Icons/Whatsapp.png";
+import ze from "./Assets/Logos/zeDelivery.png";
+import ifood from "./Assets/Logos/ifood.png";
 
 /* import de componentes */
 //import AlertTest from "./Layout/AlertTest";
