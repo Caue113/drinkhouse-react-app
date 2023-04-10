@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 /* folha css */
 import "../Styles/header.css";
 
-import Logo from "../Assets/Logo1.png";
-import Carrinho from "../Assets/carrinho.png";
+import Logo from "../Assets/Logos/Logo1.png";
+import Carrinho from "../Assets/Icons/carrinho.png";
 /* <Nav className="justify-content-center"> </Nav>*/
 const Header = () => {
   return (

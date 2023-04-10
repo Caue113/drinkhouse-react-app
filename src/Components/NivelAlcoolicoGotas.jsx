@@ -2,8 +2,8 @@ import React from "react";
 
 import "../Styles/NivelAlcoolicoGotas.css";
 
-import dripOff from "../Assets/drop.png";
-import dripOn from "../Assets/drop2.png";
+import dripOff from "../Assets/Icons/drop.png";
+import dripOn from "../Assets/Icons/drop2.png";
 
 function NivelAlcoolicoGotas(props) {
   let gotas = [];
