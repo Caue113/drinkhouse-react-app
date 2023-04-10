@@ -17,10 +17,34 @@ function Bebidas() {
     <div className="container" style={style}>
       <Nav className="row">
         <Nav.Item>
-          <Link to={"./bebida/1"}>Skol 239ml</Link>
+          <Link to={"../bebida/1"}>Cerveja Brahma Duplo Malte</Link>
         </Nav.Item>
         <Nav.Item>
-          <Link to={"./bebida/2"}>Skol Garrafa</Link>
+          <Link to={"../bebida/2"}>Cerveja Skol beats</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to={"../bebida/3"}>Cerveja Nova Schin</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to={"../bebida/4"}>Cerveja Heineken Origin</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to={"../bebida/5"}>Cerveja Budweiser long neck</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to={"../bebida/6"}>Cerveja Antarctica Sub Zero</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to={"../bebida/7"}>Cerveja Petra Puro Malte</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to={"../bebida/8"}>Cerveja Caracu Cerveja Escura</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to={"../bebida/9"}>Cerveja Lokal Bier cerveja pilsen</Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Link to={"../bebida/10"}>Cerveja Itaipava 100% Malte</Link>
         </Nav.Item>
       </Nav>
 
