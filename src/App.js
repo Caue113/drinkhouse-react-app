@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./App.css";
-import axios from "axios";
 
 /* importe das imagens da tela principal */
 import titleImage from "./Assets/image1.png";
@@ -26,22 +24,13 @@ import ze from "./Assets/zeDelivery.png";
 import ifood from "./Assets/ifood.png";
 
 /* import de componentes */
-import AlertTest from "./Layout/AlertTest";
-import DivDB from "./Components/_divDatabaseTest";
+//import AlertTest from "./Layout/AlertTest";
+//import DivDB from "./Components/_divDatabaseTest";
 import Footer from "./Layout/Footer";
 import Header from "./Layout/Header.jsx";
-import { Button } from "react-bootstrap";
+//import { Button } from "react-bootstrap";
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    axios.get("http://localhost:3002/bebidas").then((res) => {
-      console.log(res);
-      setMessage(res.data);
-    });
-  }, []);
-
   return (
     <>
       <main className="App">
@@ -49,23 +38,46 @@ function App() {
 
         <div className="firstContainer">
           <h1 className="title">Sede?</h1>
-          <div className='titles'>
+          <div className="titles">
             <h3 className="subtitle">Sacie-se com</h3>
             <h3 className="underscoreSubtitle">The Drink House</h3>
           </div>
 
           <div className="imageContainer">
-            <img className="titleImage" src={titleImage} alt="image" />
+            <img className="titleImage" src={titleImage} alt="" />
           </div>
-          
         </div>
 
         <div className="mainSearch">
           <div ClassName="searchLinks">
-            <Nav.Link className="searches" style={{color: '#79111E', fontSize: '125px', textAlign: 'left'}}> Cervejas </Nav.Link>
-            <Nav.Link className="searches" style={{color: '#79111E', fontSize: '100px', textAlign: 'left'}}> Vinhos </Nav.Link>
-            <Nav.Link className="searches" style={{color: '#79111E', fontSize: '75px', textAlign: 'left'}}> Destilados </Nav.Link>
-            <Nav.Link className="searches" style={{color: '#79111E', fontSize: '50px', textAlign: 'left'}}> Sucos e refrigerantes </Nav.Link>
+            <Nav.Link
+              className="searches"
+              style={{ color: "#79111E", fontSize: "125px", textAlign: "left" }}
+            >
+              {" "}
+              Cervejas{" "}
+            </Nav.Link>
+            <Nav.Link
+              className="searches"
+              style={{ color: "#79111E", fontSize: "100px", textAlign: "left" }}
+            >
+              {" "}
+              Vinhos{" "}
+            </Nav.Link>
+            <Nav.Link
+              className="searches"
+              style={{ color: "#79111E", fontSize: "75px", textAlign: "left" }}
+            >
+              {" "}
+              Destilados{" "}
+            </Nav.Link>
+            <Nav.Link
+              className="searches"
+              style={{ color: "#79111E", fontSize: "50px", textAlign: "left" }}
+            >
+              {" "}
+              Sucos e refrigerantes{" "}
+            </Nav.Link>
           </div>
           <img className="imageSearch" src={logo2} alt="logo" />
         </div>
@@ -84,49 +96,53 @@ function App() {
         <div className="mysteryBox">
           <div className="titleDetail">
             <h1 className="boxTitle"> Conheça nossas </h1>
-            <Link className="link1" style={{fontSize: '45px', color: '#466362' }} to={"/caixas"}> Caixas Misteriosas </Link>
+            <Link
+              className="link1"
+              style={{ fontSize: "45px", color: "#466362" }}
+              to={"/caixas"}
+            >
+              {" "}
+              Caixas Misteriosas{" "}
+            </Link>
           </div>
-          
+
           <img className="boxImage" src={caixa} alt="caixa misteriosa" />
         </div>
 
         <div className="findOut">
           <h1 className="mapsTitle"> Onde nos encontrar? </h1>
-            <div className='mapAndNames'>
+          <div className="mapAndNames">
             <img className="map" src={mapa} alt="localização" />
-            <div className='names'>
+            <div className="names">
               <h3 className="localNames"> Campinas, SP </h3>
               <p className="streetNames"> R. Dr. Guilherme Silva </p>
               <h3 className="localNames"> Uberaba, MG </h3>
               <p className="streetNames"> AV. da Saudade </p>
-              <h3 className="localNames"> Curitiba, PR </h3> 
+              <h3 className="localNames"> Curitiba, PR </h3>
               <p className="streetNames"> Av. Visconde de Guarapará</p>
             </div>
-          </div> 
+          </div>
         </div>
 
         <div className="deliveryContainer">
-          <div className='titleContainer'>
+          <div className="titleContainer">
             <h1 className="deliveryTitle"> Peça um delivery </h1>
           </div>
 
           <div className="conjunt1">
             <img className="cellIcon" src={cell} alt="icon" />
-            <div className='numbers1'>
+            <div className="numbers1">
               <h5 className="number"> (34) 3321-9999 </h5>
               <h5 className="number"> 0800 999 9999 </h5>
             </div>
-            
-            <div className='conjunt2'>
+
+            <div className="conjunt2">
               <img className="ZapZap" src={zap} alt="icon" />
               <div className="numbers2">
                 <h5 className="number"> (34) 9 9999-9999 </h5>
-
               </div>
             </div>
-           
           </div>
-          
 
           <img className="deliveries" src={ze} alt="Zé Delivery" />
           <img className="deliveries" src={ifood} alt="ifood" />

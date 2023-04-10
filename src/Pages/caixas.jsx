@@ -1,13 +1,12 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
 
 /* importe de imagens */
-import caixa from "../Assets/Caixa.png"
+import caixa from "../Assets/Caixa.png";
 
-import caixa1 from "../Assets/greenMysteryBox.png"
-import caixa2 from "../Assets/niggerMisteryBox.png"
-import caixa3 from "../Assets/blueMysteryBox.png"
-import caixa4 from "../Assets/redMysteryBox.png"
+import caixa1 from "../Assets/greenMysteryBox.png";
+import caixa2 from "../Assets/niggerMisteryBox.png";
+import caixa3 from "../Assets/blueMysteryBox.png";
+import caixa4 from "../Assets/redMysteryBox.png";
 
 import Header from "../Layout/Header";
 import Footer from "../Layout/Footer";
@@ -73,24 +72,25 @@ function Caixas() {
             justifyContent: "space-evenly",
           }}
         >
-          <a href="#">
+          <button style={{ backgroundColor: "rgba(70,99,98,0)" }}>
             <img width={300} height={300} src={caixa1} alt="Case Misteriosa" />
             <p class="text-center" style={{ color: "#fff" }}>
               Case Misteriosa
             </p>
-          </a>
-          <a href="#">
+          </button>
+
+          <button style={{ backgroundColor: "rgba(70,99,98,0)" }}>
             <img width={300} height={300} src={caixa3} alt="Case Refinado" />
             <p class="text-center" style={{ color: "#fff" }}>
               Case Refinado
             </p>
-          </a>
-          <a href="#">
+          </button>
+          <button style={{ backgroundColor: "rgba(70,99,98,0)" }}>
             <img width={300} height={300} src={caixa4} alt="Case Kids" />
             <p class="text-center" style={{ color: "#fff" }}>
               Case Kids
             </p>
-          </a>
+          </button>
         </div>
       </div>
       <div
@@ -121,12 +121,13 @@ function Caixas() {
           }}
         >
           <div>
-            <a href="#">
+            <button style={{ backgroundColor: "rgba(70,99,98,0)" }}>
               <h3>Standart</h3>
               <p>Um pequeno agrado mensal</p>
               <p>R$ 74.90</p>
               <img width={200} height={200} src={caixa1} alt="Case" />
-            </a>
+            </button>
+            <p>*imagem meramente ilustrativa</p>
             <p>Inclui: </p>
             <ul>
               <li>2 Cervajas</li>
@@ -135,12 +136,13 @@ function Caixas() {
             </ul>
           </div>
           <div>
-            <a href="#">
+            <button style={{ backgroundColor: "rgba(70,99,98,0)" }}>
               <h3>Bebidas Finas</h3>
               <p>Para aquele encontro marcante</p>
               <p>R$ 454,50</p>
               <img width={200} height={200} src={caixa3} alt="Case" />
-            </a>
+            </button>
+            <p>*imagem meramente ilustrativa</p>
             <p>Inclui: </p>
             <ul>
               <li>1 vinho tinto</li>
@@ -151,12 +153,13 @@ function Caixas() {
             </ul>
           </div>
           <div>
-            <a href="#">
+            <button style={{ backgroundColor: "rgba(70,99,98,0)" }}>
               <h3>Destilados diversos</h3>
               <p>Para os mais exigentes paladares</p>
               <p>R$ 415,98</p>
               <img width={200} height={200} src={caixa2} alt="Case" />
-            </a>
+            </button>
+            <p>*imagem meramente ilustrativa</p>
             <p>Inclui: </p>
             <ul>
               <li>1 cachaça branca</li>
@@ -168,12 +171,13 @@ function Caixas() {
             </ul>
           </div>
           <div>
-            <a href="#">
+            <button style={{ backgroundColor: "rgba(70,99,98,0)" }}>
               <h3>Kids</h3>
               <p>A garotada também incluída</p>
               <p>R$ 99,98</p>
               <img width={200} height={200} src={caixa4} alt="Case" />
-            </a>
+            </button>
+            <p>*imagem meramente ilustrativa</p>
             <p>Inclui: </p>
             <ul>
               <li>2 refrigerantes de 2L</li>
