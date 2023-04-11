@@ -12,6 +12,9 @@ import "../Styles/Bebida.css";
 //import BebidaCard from "../Components/BebidaCard";
 import BebidasRelacionadas from "../Layout/BebidasRelacionadas";
 
+
+import test from "../Assets/imgs/Bebidas/cerveja-brahma-duplo-malte-350.png";
+
 export async function loader({ params }) {
   console.log("Rodando PARAMS de LOADER");
   console.log(params);
@@ -86,10 +89,10 @@ function Bebida() {
         <div className="row informacoes">
           <div className="col-4">
             <img
-              src="https://placekitten.com/g/100/200"
+              src={require("../Assets/imgs/Bebidas/" + row.url_imagem)}
               class="img-fluid bebida-imagem"
               alt="bebida"
-            ></img>
+            />
           </div>
 
           <div className="col-8">
