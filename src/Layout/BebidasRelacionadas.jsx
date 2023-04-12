@@ -25,8 +25,6 @@ for(let i = 0; i < 4; i++){
         rng = Math.floor(10 * Math.random() + 1);
     }
     randomDrinks.push(rng);
-    console.log("RANDOM DRINKS")
-    console.log(randomDrinks)
 }
 
 try {
@@ -61,8 +59,6 @@ function BebidasRelacionadas(){
 
         bebidasRelacionadas.push(card);
     }
-
-
 
     return(
         <>

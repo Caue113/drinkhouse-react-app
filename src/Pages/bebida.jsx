@@ -1,24 +1,16 @@
 import React from "react";
 import axios from "axios";
 import { useLoaderData } from "react-router-dom";
-import "../Styles/Bebida.css";
 import Header from "../Layout/Header.jsx";
 import Footer from "../Layout/Footer.jsx";
+import BebidasRelacionadas from "../Layout/BebidasRelacionadas";
 
 import NivelAlcoolicoGotas from "../Components/NivelAlcoolicoGotas.jsx";
 import BotaoComprar from "../Components/BotaoComprar";
 
 import "../Styles/Bebida.css";
-//import BebidaCard from "../Components/BebidaCard";
-import BebidasRelacionadas from "../Layout/BebidasRelacionadas";
-
-
-import test from "../Assets/imgs/Bebidas/cerveja-brahma-duplo-malte-350.png";
 
 export async function loader({ params }) {
-  console.log("Rodando PARAMS de LOADER");
-  console.log(params);
-
   let SQL_RESULT;
 
   try {
@@ -35,19 +27,6 @@ export async function loader({ params }) {
   }
 }
 
-/* 
-function promocaoElement(){
-
-    let hasPromocao = row.promocao;
-
-    if(hasPromocao){
-        return(
-            <p> Promoção de {row.promocao} </p>
-        );
-    }
-}
- */
-
 /**
  * Formatador de preço para BRL
  * @returns {String} Valor formatado
@@ -60,11 +39,9 @@ const CurrencyFormatBRL = Intl.NumberFormat("pt-BR", {
 function Bebida() {
   const SQL_DATA = useLoaderData();
   let row;
-  console.log(SQL_DATA);
 
   if (SQL_DATA[0]) {
     row = SQL_DATA[0];
-    console.log(row);
   }
 
   //Lógica temporária. Deve ser feita em outro ambiente
@@ -77,7 +54,6 @@ function Bebida() {
     );
   }
 
-  console.log("TESTE");
   return (
     <>
       <Header></Header>
