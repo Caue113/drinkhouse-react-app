@@ -9,6 +9,12 @@
     margin: 1rem 0rem;
 }
 
+.informacoes-imagem{
+    background-color: whitesmoke;
+    padding: 30px;
+    border-radius:10px
+}
+
 
 .informacoes-destaque{
     color: #79111E;

@@ -86,8 +86,8 @@ function Bebida() {
           <h1 className="bebida-titulo">{row.NomeBebida}</h1>
         </div>
 
-        <div className="row informacoes">
-          <div className="col-4">
+        <div className="row informacoes align-items-center">
+          <div className="col-4 informacoes-imagem">
             <img
               src={require("../Assets/imgs/Bebidas/" + row.url_imagem)}
               class="img-fluid bebida-imagem"
