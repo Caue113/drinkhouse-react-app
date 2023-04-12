@@ -1,5 +1,6 @@
 import React from "react";
 import BebidaCard from "../Components/BebidaCard";
+import axios from "axios";
 
 //Retrieve data from database.
     //4 Different drinks that are related to current drink.
@@ -9,42 +10,53 @@ import BebidaCard from "../Components/BebidaCard";
         and count the number of times they have been bought together.
         After, make a rank for each case and retrieve only the first four.
     */
+
+//Get 4 random numbers to display the drinks.
+//As of now, we can only use ids 1 to 10.
+
+let QTD_RELATED_DRINKS = 4;
+let randomDrinks = [];
+let requestRelatedDrinks;
+
+for(let i = 0; i < 4; i++){
+    let rng  = Math.floor(10 * Math.random() + 1);
+
+    while(randomDrinks.includes(rng)){
+        rng = Math.floor(10 * Math.random() + 1);
+    }
+    randomDrinks.push(rng);
+    console.log("RANDOM DRINKS")
+    console.log(randomDrinks)
+}
+
+try {
+    
+    axios.get(`http://localhost:3002/bebidas-relacionadas/`,
+    {
+        params: {
+            relatedDrinks: randomDrinks,
+        }
+    })
+    .then((res)=>{
+        requestRelatedDrinks = res.data;
+    })
+
+} catch (error) {
+    console.warn("ERRO EM:  " + BebidasRelacionadas.name);
+    console.error(error);
+}
+
+
 function BebidasRelacionadas(){
     
     let bebidasRelacionadas = [];
-
-    //Bebidas temporárias. Substituir por GET da database
-    let tempBebidas = [
-        {
-            id: 1,
-            nome: "Antarctica",
-            imageURL: "https://placekitten.com/g/99/99"
-        },
-        {
-            id: 2,
-            nome: "Crystal",
-            imageURL: "https://placekitten.com/g/100/100"
-        },
-        {
-            id: 3,
-            nome: "Casillero del Diablo",
-            imageURL: "https://placekitten.com/g/101/101"
-        },
-        {
-            id: 4,
-            nome: "Grey Goose",
-            imageURL: "https://placekitten.com/g/102/102"
-        },
-    ]
-
-    let QTD_BEBIDAS_RELACIONADAS = 4;
     
-    for(let i = 0; i < QTD_BEBIDAS_RELACIONADAS; i++){
+    for(let i = 0; i < QTD_RELATED_DRINKS; i++){
         let card;
         card = <BebidaCard 
-            bebidaId={tempBebidas[i].id}
-            name={tempBebidas[i].nome}
-            imageURL={tempBebidas[i].imageURL}
+            bebidaId={requestRelatedDrinks[i].Id}
+            name={requestRelatedDrinks[i].NomeBebida}
+            imageURL={require("../Assets/imgs/Bebidas/" + requestRelatedDrinks[i].url_imagem) }
         />
 
         bebidasRelacionadas.push(card);
